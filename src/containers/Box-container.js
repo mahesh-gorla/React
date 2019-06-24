@@ -6,16 +6,13 @@ import * as actionCreators from '../actions/index';
 class BoxContainer extends Component {
 	render() {
 		const divStyles = {
-			width: '300px',
-			height: '400px',
 			border: '15px solid #ffffff',
-			padding: '50px',
-			margin: '20px',
-			backgroundColor: 'red'
+			padding: '50px'
 		};
 		return (
 			<div style={divStyles}>
-				<Box />
+				<Box handleClick={this.props.loadColor} color={this.props.color} />
+				<p>{this.props.color}</p>
 			</div>
 		);
 	}
