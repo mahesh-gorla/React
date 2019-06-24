@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import Box from '../components/Box';
+import { connect } from 'react-redux';
+import * as actionCreators from '../actions/index';
 
-export default class BoxContainer extends Component {
+class BoxContainer extends Component {
 	render() {
 		const divStyles = {
 			width: '300px',
@@ -18,3 +20,11 @@ export default class BoxContainer extends Component {
 		);
 	}
 }
+
+const mapStateToProps = state => {
+	return state;
+};
+export default connect(
+	mapStateToProps,
+	actionCreators
+)(BoxContainer);
